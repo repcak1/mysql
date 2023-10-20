@@ -13,3 +13,17 @@ $conn = mysqli_connect($servername,$username,$password);
  }
  echo "connected successfully";
 ?>
+
+
+
+<?php
+$datebase="repcak";
+//create database
+$sql= "CREATE DATABASE $datebase";
+if (mysqli_query($conn, $sql)) {
+    echo "database created successfully";
+}  else {
+    echo "error creating database: " . mysqli_error($conn);
+}
+
+?>
